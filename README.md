@@ -9,7 +9,7 @@
 ### ✪ Objetivos primarios
 
 - [x] Desenvolver o wireframe da pagina.
-- [ ] Desenvolver o frontend da pagina.
+- [x] Desenvolver o frontend da pagina.
 - [ ] Adicionar as funcionalidades.
 - [ ] Deixar o site Responsivo.
 
