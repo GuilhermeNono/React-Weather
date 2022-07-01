@@ -2,7 +2,7 @@
 ## 📖 Descrição 
 <p>Weather App desenvolvido em React, typescript e Styled-Components. </p>
 
-<a href="https://github.com/GuilhermeNono" target="_blank">- LIVE DEMO</a>
+<a href="https://github.com/GuilhermeNono" target="_blank">- LIVE DEMO(Under Development)</a>
 
 ##
 
