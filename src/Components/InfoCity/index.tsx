@@ -2,13 +2,20 @@ import React from 'react';
 
 import { Container,Status,City,UFCountry,Temperature} from './styles';
 
-const InfoCity: React.FC = () => {
+interface Props{
+  City?:string;
+  statusCity?:string;
+  UfCountry?: string;
+  TemperatureCity?: string;
+}
+
+const InfoCity: React.FC<Props> = (props:Props) => {
   return (
     <Container>
-        <Status>Predominantemente ensolarado</Status>
-        <City>Igaraçu do Tietê</City>
-        <UFCountry>São Paulo - Brasil</UFCountry>
-        <Temperature>34°</Temperature>
+        <Status>{props.statusCity ? props.statusCity : "Predominantemente ensolarado"}</Status>
+        <City>{props.City ? props.City : "Igaraçu do tietê"}</City>
+        <UFCountry>{props.UfCountry ? props.UfCountry : "São Paulo - Brasil"}</UFCountry>
+        <Temperature>{props.TemperatureCity ? props.TemperatureCity : "34°"}</Temperature>
     </Container>
   );
 }
