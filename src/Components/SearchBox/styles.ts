@@ -13,7 +13,10 @@ export const Container = styled.div`
 `;
 
 export const SearchIcon = styled.div`
-    padding-left:40px;
+    margin-left:40px;
+    background-image: url("./images/icon_search.svg");
+    width: 54px;
+    height: 54px;
 `;
 
 export const TextInput = styled.input`

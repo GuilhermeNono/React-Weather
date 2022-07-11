@@ -11,7 +11,7 @@ interface Props {
 const SearchBox: React.FC<Props> = (props:Props) => {
   return (
     <Container>
-      <SearchIcon>ICON</SearchIcon>
+      <SearchIcon></SearchIcon>
       <TextInput
         type="text"
         placeholder="Informe sua cidade"
