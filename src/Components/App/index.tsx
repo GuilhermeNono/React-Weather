@@ -30,12 +30,13 @@ const App: React.FC = () => {
         `${process.env.REACT_APP_WEATHER_BASE}/locations/v1/cities/search?q=${query}&apikey=${process.env.REACT_APP_WEATHER_TOKEN}&language=pt-br`
       );
       setLocation(locationInfo.data[0]);
+      console.log(locationInfo.data[0])
 
       var currentWeatherStatus = await axios.get(
         `${process.env.REACT_APP_WEATHER_BASE}/currentconditions/v1/${locationInfo.data[0].Key}?apikey=${process.env.REACT_APP_WEATHER_TOKEN}&language=pt-br`
       );
       setWeather(currentWeatherStatus.data);
-
+        console.log(currentWeatherStatus.data[0])
       setInfoWeather(weatherFormatter(locationInfo, currentWeatherStatus));
     }
   }
@@ -87,8 +88,8 @@ const App: React.FC = () => {
   }, [hourly])
 
   return (
-    <Container>
-      <StatusSunMoon></StatusSunMoon>
+    <Container isDay={weather[0].IsDayTime}>
+      <StatusSunMoon isDay={weather[0].IsDayTime}></StatusSunMoon>
       <SearchBox query={query} setQuery={setQuery} search={search} />
       <InfoCity
         City={infoWeather?.cityName}

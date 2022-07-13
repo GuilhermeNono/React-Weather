@@ -17,10 +17,10 @@ html, body {
     width: 100%;
     background: #444444;
     color: #fff;
-    background-image:url("./images/image.svg");
+    /* background-image:url("./images/image.svg");
 background-repeat: no-repeat;
 background-size: cover;
-background-position: 0 180px;
+background-position: 0 180px; */
 }
 
 `;

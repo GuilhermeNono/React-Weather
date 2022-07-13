@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
+interface PropsTime{
+  isDay?:boolean;
+}
+
+export const Container = styled.div<PropsTime>`
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -8,15 +12,21 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: start;
   align-items: center;
+  background-image:url("./images/image.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: ${(props) => props.isDay ? "#769CFF" : "#181818"};
+  background-position: 0 180px;
 `;
 
-export const StatusSunMoon = styled.div`
+export const StatusSunMoon = styled.div<PropsTime>`
 position: absolute;
 top: 50px;
 left: 100px;
 width: 113px;
 height: 113px;
 border-radius: 50%;
-background: #FFFFFF;
-box-shadow: 0px 2px 22px 7px rgba(255, 255, 255, 0.25), inset 5px 6px 4px rgba(0, 0, 0, 0.25);
+background: ${(props) => props.isDay ? "#FFE178" : "#FFFFFF"};
+box-shadow: ${(props) => props.isDay ? "0px 2px 22px 7px rgba(255, 225, 120, 0.25)" : "0px 2px 22px 7px rgba(255, 255, 255, 0.25), inset 5px 6px 4px rgba(0, 0, 0, 0.25)"};
 `;
+//
