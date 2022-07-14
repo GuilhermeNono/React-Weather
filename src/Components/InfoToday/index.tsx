@@ -1,4 +1,5 @@
 import React from "react";
+import { InfoTodayI } from "../App";
 
 import {
   Container,
@@ -18,7 +19,11 @@ import {
   DescPrecipitation,
 } from "./styles";
 
-const InfoToday: React.FC = () => {
+interface Props {
+  infoToday:InfoTodayI;
+}
+
+const InfoToday: React.FC<Props> = ({infoToday}) => {
   return (
     // TODO: Trocar os placeholders dos campos de descrição pelas devidas informações
     <Container>
@@ -29,24 +34,24 @@ const InfoToday: React.FC = () => {
         <InfoLeft>
           <Info>
             <InfoRealFeel>Real Feel</InfoRealFeel>
-            <DescRealFeel>29°C</DescRealFeel>
+            <DescRealFeel>{!infoToday ? "29°C" : infoToday.RealFeelTemperature}</DescRealFeel>
           </Info>
 
           <Info>
             <InfoWindSpeed>Wind Speed</InfoWindSpeed>
-            <DescWindSpeed>11.1km/h</DescWindSpeed>
+            <DescWindSpeed>{!infoToday ? "11.1km/h" : infoToday.windSpeed}</DescWindSpeed>
           </Info>
         </InfoLeft>
 
         <InfoRight>
           <Info>
             <InfoHumidity>Humidity</InfoHumidity>
-            <DescHumidity>84%</DescHumidity>
+            <DescHumidity>{!infoToday ? "84%" : infoToday.Humidity}</DescHumidity>
           </Info>
 
           <Info>
             <InfoPrecipitation>Precipitation</InfoPrecipitation>
-            <DescPrecipitation>0%</DescPrecipitation>
+            <DescPrecipitation>{!infoToday ? "0%" : infoToday.Precipitation}</DescPrecipitation>
           </Info>
         </InfoRight>
 

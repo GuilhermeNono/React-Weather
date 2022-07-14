@@ -9,9 +9,11 @@ interface Props{
     "Time":string;
     "MaxTemperature":string;
   }[];
+
+  InfoTodayI:any;
 }
 
-const InfoFull: React.FC<Props> = ({InfoArrayHourlyForecast}) => {
+const InfoFull: React.FC<Props> = ({InfoArrayHourlyForecast, InfoTodayI}) => {
 
   return (
     <Container>
@@ -29,7 +31,7 @@ const InfoFull: React.FC<Props> = ({InfoArrayHourlyForecast}) => {
           <HourCard Hour={`${InfoArrayHourlyForecast?.length === 0 || !InfoArrayHourlyForecast ? "18:00" : InfoArrayHourlyForecast[10].Time}`} Temperature={InfoArrayHourlyForecast?.length === 0 || !InfoArrayHourlyForecast ? "31°" : InfoArrayHourlyForecast[10].MaxTemperature}/>
         </HourWrapper>
         <DayliInfoWrapper>
-            <InfoToday />
+            <InfoToday infoToday={InfoTodayI}/>
             <InfoWeek />
         </DayliInfoWrapper>
     </Container>
