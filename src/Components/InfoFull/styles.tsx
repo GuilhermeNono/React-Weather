@@ -21,6 +21,15 @@ flex-direction: row;
 align-items: center;
 justify-content: center;
 gap: 40px;
+
+@media (max-width: 1250px) {
+    width: 880px;
+    gap: 15px;
+}
+
+@media (max-width: 900px) {
+    width: 100vw;
+}
 `;
 
 export const DayliInfoWrapper = styled.div`
@@ -28,4 +37,10 @@ display: flex;
 flex-direction: row;
 gap: 38px;
 margin-top: 25px;
+
+@media (max-width: 900px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 `;

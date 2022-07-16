@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  width: 600px;
+width: 600px;
 height: 279px;
 background: #E8FFEF;
 border: 1px solid #D2E8D9;
@@ -10,6 +10,17 @@ border-radius: 40px 40px 0px 0px;
 display: flex;
 flex-direction: column;
 align-items: center;
+
+@media (max-width: 1250px) {
+  width: 400px;
+  height: 279px;
+}
+
+@media (max-width: 900px) {
+  width: 100vw;
+  max-width: 100%;
+  border-radius: 40px 40px 40px 40px;
+}
 `;
 
 export const Title = styled.div`

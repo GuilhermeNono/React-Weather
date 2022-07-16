@@ -1,4 +1,5 @@
 import React from "react";
+import { InfoFiveDaysI } from "../App";
 
 import {
   Container,
@@ -12,15 +13,14 @@ import {
 } from "./styles";
 
 interface Props {
-    Date?:string;
-    Precipitation?:string | number;
+    infoDays:InfoFiveDaysI;
 }
 
-const Card: React.FC<Props> = (props:Props) => {
+const Card: React.FC<Props> = ({infoDays}) => {
   return (
     <Container>
         <InfoUp>
-          <Date>{props.Date ? props.Date : "00/00"}</Date>
+          <Date>{infoDays ? infoDays.Date : "00/00"}</Date>
           <IconStatus></IconStatus>
         </InfoUp>
 
@@ -28,7 +28,7 @@ const Card: React.FC<Props> = (props:Props) => {
 
         <InfoDown>
           <IconPrecipitation></IconPrecipitation>
-          <Precipitation>{props.Date ? props.Date : "0%"}</Precipitation>
+          <Precipitation>{infoDays ? infoDays.Precipitation : "0%"}</Precipitation>
         </InfoDown>
     </Container>
   );

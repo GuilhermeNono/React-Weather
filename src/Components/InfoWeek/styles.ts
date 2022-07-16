@@ -10,6 +10,17 @@ border-radius: 40px 40px 0px 0px;
 display: flex;
 flex-direction: column;
 align-items: center;
+
+@media (max-width: 1250px) {
+  width: 400px;
+  height: 279px;
+}
+
+@media (max-width: 900px) {
+  width: 100vw;
+  max-width: 100%;
+  border-radius: 40px 40px 40px 40px;
+}
 `;
 
 export const Title = styled.div`
@@ -34,4 +45,12 @@ justify-content: center;
 align-content: space-between;
 align-items: flex-end;
 gap: 40px;
+
+@media (max-width: 1250px) {
+  gap: 20px;
+}
+
+@media (max-width: 900px) {
+  gap: 80px;
+}
 `;

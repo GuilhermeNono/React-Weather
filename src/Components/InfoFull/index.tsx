@@ -3,6 +3,7 @@ import InfoToday from '../InfoToday';
 import InfoWeek from '../InfoWeek';
 import HourCard from '../HourCard'
 import { Container,HourWrapper, DayliInfoWrapper} from './styles';
+import { InfoFiveDaysI } from '../App';
 
 interface Props{
   InfoArrayHourlyForecast?:{
@@ -11,9 +12,10 @@ interface Props{
   }[];
 
   InfoTodayI:any;
+  InfoCardData:InfoFiveDaysI[];
 }
 
-const InfoFull: React.FC<Props> = ({InfoArrayHourlyForecast, InfoTodayI}) => {
+const InfoFull: React.FC<Props> = ({InfoArrayHourlyForecast, InfoTodayI, InfoCardData}) => {
 
   return (
     <Container>
@@ -32,7 +34,7 @@ const InfoFull: React.FC<Props> = ({InfoArrayHourlyForecast, InfoTodayI}) => {
         </HourWrapper>
         <DayliInfoWrapper>
             <InfoToday infoToday={InfoTodayI}/>
-            <InfoWeek />
+            <InfoWeek CardData={InfoCardData}/>
         </DayliInfoWrapper>
     </Container>
   );

@@ -25,7 +25,6 @@ interface Props {
 
 const InfoToday: React.FC<Props> = ({infoToday}) => {
   return (
-    // TODO: Trocar os placeholders dos campos de descrição pelas devidas informações
     <Container>
       <Title>Previsão do dia</Title>
       <Line></Line>

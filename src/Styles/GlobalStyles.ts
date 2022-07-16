@@ -15,7 +15,7 @@ export default createGlobalStyle`
 html, body {
     height: 100%;
     width: 100%;
-    background: #444444;
+    background: #d9eddf;
     color: #fff;
     /* background-image:url("./images/image.svg");
 background-repeat: no-repeat;
