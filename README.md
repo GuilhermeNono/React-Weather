@@ -2,7 +2,7 @@
 ## 📖 Descrição 
 <p>Weather App desenvolvido em React, typescript e Styled-Components. </p>
 
-<a href="https://github.com/GuilhermeNono" target="_blank">- LIVE DEMO(Under Development)</a>
+<a href="https://nonoweather.netlify.app/" target="_blank">- LIVE DEMO(Under Development)</a>
 
 ##
 
@@ -10,8 +10,8 @@
 
 - [x] Desenvolver o wireframe da pagina.
 - [x] Desenvolver o frontend da pagina.
-- [ ] Adicionar as funcionalidades.
-- [ ] Deixar o site Responsivo.
+- [x] Adicionar as funcionalidades.
+- [x] Deixar o site Responsivo.
 
 #
 ![Interface](https://i.imgur.com/vzet0Nq.png)
