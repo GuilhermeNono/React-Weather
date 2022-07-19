@@ -100,12 +100,11 @@ const App: React.FC = () => {
 
   async function getNext12HoursForecast(LocationKey: string) {
     let hoursForecast = await axios.get(
-      `http://dataservice.accuweather.com/forecasts/v1/hourly/12hour/${LocationKey}?apikey=${process.env.REACT_APP_WEATHER_TOKEN}&language=pt-br&metric=true`
+      `${process.env.REACT_APP_WEATHER_BASE}/forecasts/v1/hourly/12hour/${LocationKey}?apikey=${process.env.REACT_APP_WEATHER_TOKEN}&language=pt-br&metric=true`
     );
     let hoursAndTemperature: any[] = [];
     hoursForecast.data.forEach((ss: any) => {
       hoursAndTemperature.push(ss);
-      console.log(hoursAndTemperature)
     });
     setHourly(hoursAndTemperature);
   }

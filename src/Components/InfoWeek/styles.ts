@@ -5,7 +5,11 @@ width: 100%;
 max-width: 100%;
 height: 100%;
 display: flex;
-justify-content: center;
+justify-content: start;
+
+@media (max-width: 900px) {
+  justify-content: center;
+}
 `;
 
 export const CardConfig = styled.div`
