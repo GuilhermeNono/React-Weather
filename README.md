@@ -2,7 +2,7 @@
 ## 📖 Descrição 
 <p>Weather App desenvolvido em React, typescript e Styled-Components. </p>
 
-<a href="https://nonoweather.netlify.app/" target="_blank">- LIVE DEMO(Under Development)</a>
+<a href="https://nonoweather.netlify.app/" target="_blank">- LIVE DEMO</a>
 
 ##
 
