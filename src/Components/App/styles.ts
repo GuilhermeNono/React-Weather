@@ -32,5 +32,9 @@ box-shadow: ${(props) => props.isDay ? "0px 2px 22px 7px rgba(255, 225, 120, 0.2
 @media (max-width: 900px) {
   left: calc(100vw / 1.2);
 }
+
+@media (max-width: 670px) {
+  display: none;
+}
 `;
 //

@@ -1,6 +1,13 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+width: 100%;
+height: 100%;
+display: flex;
+justify-content: center;
+`;
+
+export const CardConfig = styled.div`
 width: 600px;
 height: 279px;
 background: #E8FFEF;
@@ -17,7 +24,7 @@ align-items: center;
 }
 
 @media (max-width: 900px) {
-  width: 100vw;
+  width: 95%;
   max-width: 100%;
   border-radius: 40px 40px 40px 40px;
 }

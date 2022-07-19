@@ -1,7 +1,16 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  width: 600px;
+width: 100%;
+max-width: 100%;
+height: 100%;
+display: flex;
+justify-content: center;
+`;
+
+export const CardConfig = styled.div`
+width: 600px;
+max-width: 100%;
 height: 279px;
 background: #E8FFEF;
 border: 1px solid #D2E8D9;
@@ -17,11 +26,14 @@ align-items: center;
 }
 
 @media (max-width: 900px) {
-  width: 100vw;
+  width: 95%;
   max-width: 100%;
-  border-radius: 40px 40px 40px 40px;
 }
-`;
+
+@media (max-width: 410px) {
+  width: 100%;
+}
+`
 
 export const Title = styled.div`
 width: 100%;
@@ -29,6 +41,10 @@ text-align: center;
 margin-top: 27px;
 font-size: 24px;
 color: #000;
+
+@media (max-width: 335px) {
+  font-size:20px
+}
 `;
 
 export const Line = styled.div`
@@ -50,7 +66,12 @@ gap: 40px;
   gap: 20px;
 }
 
-@media (max-width: 900px) {
-  gap: 80px;
+@media (max-width: 768px) {
+  gap: 50px;
 }
+
+@media (max-width: 590px) {
+  gap: 10px;
+}
+
 `;

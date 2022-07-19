@@ -20,6 +20,7 @@ display: flex;
 flex-direction: row;
 align-items: center;
 justify-content: center;
+flex-wrap: wrap;
 gap: 40px;
 
 @media (max-width: 1250px) {
@@ -30,9 +31,14 @@ gap: 40px;
 @media (max-width: 900px) {
     width: 100vw;
 }
+
+@media (max-width: 900px) {
+    display: none;
+}
 `;
 
 export const DayliInfoWrapper = styled.div`
+width: 100%;
 display: flex;
 flex-direction: row;
 gap: 38px;

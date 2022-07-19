@@ -17,6 +17,7 @@ import {
   DescHumidity,
   InfoPrecipitation,
   DescPrecipitation,
+  CardConfig
 } from "./styles";
 
 interface Props {
@@ -26,6 +27,7 @@ interface Props {
 const InfoToday: React.FC<Props> = ({infoToday}) => {
   return (
     <Container>
+      <CardConfig>
       <Title>Previsão do dia</Title>
       <Line></Line>
       <Informations>
@@ -55,6 +57,7 @@ const InfoToday: React.FC<Props> = ({infoToday}) => {
         </InfoRight>
 
       </Informations>
+      </CardConfig>
     </Container>
   );
 };

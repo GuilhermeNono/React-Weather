@@ -109,19 +109,6 @@ const App: React.FC = () => {
     setHourly(hoursAndTemperature);
   }
 
-  async function hourlyFormatter() {
-    let newArray: any[] = [];
-    let newTime;
-    let newTemperature;
-
-    hourly.forEach((element) => {
-      newTime = element.DateTime.slice(11, -9);
-      newTemperature = `${element.Temperature.Value}°`;
-      newArray.push({ Time: newTime, MaxTemperature: newTemperature });
-    });
-    setInfoHourly(newArray);
-  }
-
   useEffect(() => {
     if (location.Key) {
       getNext12HoursForecast(location.Key);
@@ -130,7 +117,16 @@ const App: React.FC = () => {
 
   useEffect(() => {
     if (hourly.length !== 0) {
-      hourlyFormatter();
+      let newArray: any[] = [];
+      let newTime;
+      let newTemperature;
+
+      hourly.forEach((element) => {
+        newTime = element.DateTime.slice(11, -9);
+        newTemperature = `${element.Temperature.Value}°`;
+        newArray.push({ Time: newTime, MaxTemperature: newTemperature });
+      });
+      setInfoHourly(newArray);
     }
   }, [hourly]);
 

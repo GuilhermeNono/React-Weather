@@ -20,11 +20,25 @@ export const SearchIcon = styled.div`
     background-size: cover;
     width: 54px;
     height: 54px;
+
+    @media (max-width: 600px) {
+      display: none;
+    }
 `;
 
 export const TextInput = styled.input`
+
   font-size: 36px;
   background: none;
   border: none;
   border-radius: 3px;
+
+  @media (max-width: 600px) {
+      text-align: center;
+      width: 100%;
+    }
+
+  @media (max-width: 320px) {
+    font-size: 30px;
+  }
 `;
