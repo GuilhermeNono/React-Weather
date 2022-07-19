@@ -105,6 +105,7 @@ const App: React.FC = () => {
     let hoursAndTemperature: any[] = [];
     hoursForecast.data.forEach((ss: any) => {
       hoursAndTemperature.push(ss);
+      console.log(hoursAndTemperature)
     });
     setHourly(hoursAndTemperature);
   }
@@ -123,7 +124,7 @@ const App: React.FC = () => {
 
       hourly.forEach((element) => {
         newTime = element.DateTime.slice(11, -9);
-        newTemperature = `${element.Temperature.Value}°`;
+        newTemperature = element.Temperature.Value + "°";
         newArray.push({ Time: newTime, MaxTemperature: newTemperature });
       });
       setInfoHourly(newArray);
